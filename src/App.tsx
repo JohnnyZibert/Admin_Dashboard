@@ -3,6 +3,7 @@ import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 
 import Bar from './components/BarChart'
+import PieCharts from './components/PieCharts'
 import Calendar from './scenes/calendar'
 import Contacts from './scenes/contacts'
 // import Bar from './scenes/Bar'
@@ -11,6 +12,7 @@ import Contacts from './scenes/contacts'
 import Dashboard from './scenes/dashboard'
 import Faq from './scenes/faq'
 import Form from './scenes/Form/Form'
+import Geography from './scenes/geography'
 // import FAQ from './scenes/Faq'
 import SideBar from './scenes/global/Sidebar'
 // import Form from './scenesForm'
@@ -21,6 +23,7 @@ import SideBar from './scenes/global/Sidebar'
 // import Team from './scenesTeam'
 import TopBar from './scenes/global/Topbar'
 import Invoices from './scenes/invoices'
+import Line from './scenes/line'
 import Team from './scenes/team'
 import { ColorModeContext, useMode } from './theme'
 
@@ -47,9 +50,9 @@ function App() {
               <Route path={'/calendar'} element={<Calendar />} />
               <Route path={'/faq'} element={<Faq />} />
               <Route path={'/bar'} element={<Bar />} />
-              {/*<Route path={'/pie'} element={<Pie />} />*/}
-              {/*<Route path={'/line'} element={<Line />} />*/}
-              {/*<Route path={'/geography'} element={<Geography />} />*/}
+              <Route path={'/pie'} element={<PieCharts />} />
+              <Route path={'/line'} element={<Line />} />
+              <Route path={'/geography'} element={<Geography />} />
             </Routes>
           </main>
         </div>

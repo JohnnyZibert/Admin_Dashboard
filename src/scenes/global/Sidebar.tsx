@@ -29,6 +29,7 @@ const Sidebar = () => {
   return (
     <Box
       sx={{
+        '& .pro-sidebar': { background: 'green !important' },
         '& .pro-sidebar-inner': {
           background: `${colors.primary['400']} !important`,
         },

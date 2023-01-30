@@ -5,7 +5,7 @@ import React from 'react'
 import { mockBarData as data } from '../data/mockData'
 import { tokens } from '../theme'
 
-const Bar = () => {
+const BarChart = ({ isDashboard = false }) => {
   const theme = useTheme()
   const color = tokens(theme.palette.mode)
   return (
@@ -92,7 +92,7 @@ const Bar = () => {
         tickSize: 5,
         tickPadding: 5,
         tickRotation: 0,
-        legend: 'country',
+        legend: isDashboard ? undefined : 'country',
         legendPosition: 'middle',
         legendOffset: 32,
       }}
@@ -100,7 +100,7 @@ const Bar = () => {
         tickSize: 5,
         tickPadding: 5,
         tickRotation: 0,
-        legend: 'food',
+        legend: isDashboard ? undefined : 'food',
         legendPosition: 'middle',
         legendOffset: -40,
       }}
@@ -147,4 +147,4 @@ const Bar = () => {
   )
 }
 
-export default Bar
+export default BarChart
